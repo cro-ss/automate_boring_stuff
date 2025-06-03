@@ -1,4 +1,3 @@
-# Escribe tu código aquí :-)
 ## Date detection
 dates = '''12/12/2025
 15/06/2025
@@ -18,20 +17,24 @@ dates = '''12/12/2025
 31/02/2004
 28/02/2023
 29/02/2100'''
+# Empty list day, month, year and whole dates
 day=[]
 month=[]
 year=[]
 valid_dates=[]
+# The regex of day,month , year
 import re
 date= re.compile(r'''(0[1-9]|[12][0-9]|3[01])
                     /
                     (0[1-9]|1[0-2])
                     /
                     (1\d{3}|2\d{3})''',re.VERBOSE)
+# I am gathering each part of a date in their regarding list
 for groups in date.findall(dates):
     day.append(groups[0])
     month.append(groups[1])
     year.append(groups[2])
+#Here I am defining the constraints of the day, year and so on, leap year, 30,31 or 28 days per month
 for i in range(len(day)):
     if year[i]<'1000' or year[i]>'2999':
         print(i,' year not valid')
