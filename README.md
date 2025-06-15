@@ -5,3 +5,6 @@
 2. Strong Password Detection
     - Using regex, functions and loops to evaluate a strong passwords.
     - The program will ask you until you fullfill all the strong password requirements
+4. Sandwich Maker
+  -  Using input validation pyinput we create a straigthforward way to ask for a sandwich
+  -  I have used menus, yes or not input, intinput and so on. My goal is to avoid complicated input code, it better to use pre-worked libraries 
